@@ -9,6 +9,10 @@ wasn't to get the best possible accuracy, it was to actually understand what
 There's also a small `tkinter` app at the end where you can draw a digit with
 your mouse and watch the network guess it.
 
+**Live demo:** [santoshmuruggu.github.io/Nueral-Network-from-scratch-on-MNIST](https://santoshmuruggu.github.io/Nueral-Network-from-scratch-on-MNIST/)
+— the same trained weights and the same preprocessing, ported to plain
+JavaScript so it runs entirely in the browser (no server, no ML library).
+
 ## Why bother doing it by hand
 
 It's easy to stack `Dense` layers in Keras and never think about what's
@@ -103,6 +107,7 @@ less disappeared. It was a good reminder that "the model is wrong" is usually
 | `mnist_nueral_network.py` | the real thing: full train/val/test pipeline, backprop, mini-batch SGD, saves `model.pkl` |
 | `draw_predict.py` | tkinter drawing canvas + MNIST-style preprocessing + inference on the saved model |
 | `model.pkl` | trained weights (`W1`, `b1`, `W2`, `b2`) |
+| `docs/` | the browser version (GitHub Pages): `nn.js` is a line-for-line port of the preprocessing and forward pass, `weights.bin` is `model.pkl` as float32 |
 | `mnist.pkl.gz` | the dataset (not committed — see `.gitignore`) |
 | `test1.png`, `test2.png` | screenshots of the drawing app calling a 6 and a 9 correctly |
 
